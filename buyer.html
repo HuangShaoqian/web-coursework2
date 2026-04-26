@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buyer - Car Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h2>Buyer Car Center</h2>
+        <div class="nav">
+            <a href=" ">Home</a >
+            <a href="intro.html">Introduction</a >
+            <a href="user.html">Register</a >
+            <a href="buyer.html">Buyer</a >
+            <a href="seller.html">Seller</a >
+        </div>
+    </div>
+
+    <div class="search-box">
+        <input type="text" id="searchInp" placeholder="Search brand / car name / model">
+        <button id="searchBtn">Search</button>
+    </div>
+
+    <div class="filter">
+        <select>
+            <option>All Brands</option>
+            <option>BMW</option>
+            <option>Mercedes</option>
+            <option>Toyota</option>
+            <option>BYD</option>
+        </select>
+        <select>
+            <option>Price Range</option>
+            <option>Under 100k</option>
+            <option>100k-200k</option>
+            <option>Over 200k</option>
+        </select>
+        <select>
+            <option>Power Type</option>
+            <option>Gasoline</option>
+            <option>Electric</option>
+            <option>Hybrid</option>
+        </select>
+    </div>
+
+    <div class="car-list">
+        <div class="car-item">
+            <h4>BYD Qin PLUS</h4>
+            <p>Price: 129,800</p >
+            <p>Power: Hybrid</p >
+        </div>
+        <div class="car-item">
+            <h4>Toyota Corolla</h4>
+            <p>Price: 105,800</p >
+            <p>Power: Gasoline</p >
+        </div>
+        <div class="car-item">
+            <h4>Tesla Model 3</h4>
+            <p>Price: 231,900</p >
+            <p>Power: Electric</p >
+        </div>
+    </div>
+
+    <div class="footer">©2026 Car Trading Platform All Rights Reserved</div>
+
+    <script>
+        let btn = document.getElementById('searchBtn');
+        let inp = document.getElementById('searchInp');
+        btn.onclick = function(){
+            let key = inp.value.trim();
+            key ? alert("Searching: " + key) : alert("Please enter keyword");
+        }
+    </script>
+</body>
+</html>
